@@ -17,7 +17,7 @@ void error(const char* fmt, ...) {
 }
 
 
-// got this from ``reattach-to-user-namespace``
+/* got this from ``reattach-to-user-namespace`` */
 bool reattach_user_namespace() {
     static const char fn[] = "_vprocmgr_move_subset_to_user";
     void *(*f)();
@@ -34,6 +34,10 @@ bool reattach_user_namespace() {
 }
 
 
+/* This is simple a copy of the os x pasteboard example.
+ *
+ * It's legacy code, maybe I should change this to Cocoa objective-c API.
+ */
 void setPasteboard(PasteboardRef pasteboard, const char* data, size_t len) {
     OSStatus err = noErr;
     PasteboardSyncFlags syncFlags;
