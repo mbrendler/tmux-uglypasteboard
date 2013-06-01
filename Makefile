@@ -12,3 +12,8 @@ main.o: main.c pasteboard.h
 
 uglypasteboard: pasteboard.o main.o
 	cc -framework Carbon -o uglypasteboard pasteboard.o main.o
+
+clean:
+	rm libuglypasteboard.a
+	rm *.o
+	rm uglypasteboard
