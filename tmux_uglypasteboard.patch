@@ -1,0 +1,12 @@
+*** window-copy.c	2013-03-25 18:27:46.000000000 +0100
+--- window-copy.c	2013-06-01 07:52:44.000000000 +0200
+***************
+*** 1399,1404 ****
+--- 1399,1405 ----
+  		paste_add(&global_buffers, buf, len, limit);
+  	} else
+  		paste_replace(&global_buffers, idx, buf, len);
++ setPasteboard(NULL, buf, len);
+  }
+  
+  void
