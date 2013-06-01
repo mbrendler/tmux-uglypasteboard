@@ -1,7 +1,3 @@
-// clang -DCONSOLE_PROGRAM=1 -framework Carbon -o pasteboard pasteboard.c
-//
-// gcc -c pasteboard.c -o pasteboard.o
-// ar rcs libpasteboard.a pasteboard.o
 #include <Carbon/Carbon.h>
 #include <dlfcn.h>  /* dlsym */
 
@@ -98,16 +94,3 @@ CantClearPasteboard:
         error("%d\n", stat);
     }
 }
-
-
-#ifdef CONSOLE_PROGRAM
-    int main(int argc, char **argv) {
-        const char* content = "hehe";
-
-        if (argc > 1) {
-            content = argv[1];
-        }
-
-        setPasteboard(NULL, content, strlen(content));
-    }
-#endif

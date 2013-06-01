@@ -1,0 +1,4 @@
+glob:*.o
+glob:*.a
+glob:*.orig
+glob:uglypasteboard
