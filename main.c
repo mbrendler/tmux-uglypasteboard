@@ -10,4 +10,6 @@ int main(int argc, char **argv) {
     }
 
     setPasteboard(0, content, strlen(content));
+
+    return 0;
 }

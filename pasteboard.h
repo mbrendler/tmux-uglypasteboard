@@ -4,7 +4,12 @@
 
 #include <stddef.h>  /* size_t */
 
-typedef struct Pasteboard* PasteboardRef;
+#ifdef __APPLE__
+    typedef struct Pasteboard* PasteboardRef;
+#else
+    typedef void *PasteboardRef;
+#endif
+
 
 
 void setPasteboard(PasteboardRef pasteboard, const char* data, size_t len);
