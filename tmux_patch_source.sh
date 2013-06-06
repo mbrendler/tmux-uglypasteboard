@@ -12,12 +12,15 @@ fi
 
 patch $1/window-copy.c < tmux_uglypasteboard.patch
 
+if test `uname` -eq 'Darwin' ; then
+    EXTRA_LDFLAGS='-framework Carbon'
+fi
 
 echo
 echo Now build tmux the following way:
 echo cd $1
 echo mkdir BD
 echo cd BD
-echo ../configure "LDFLAGS='-framework Carbon -L$HERE -luglypasteboard'"
-echo make
+echo ../configure "LDFLAGS='$EXTRA_LDFLAGS -L$HERE'"
+echo LDADD=-luglypasteboard make
 echo make install
