@@ -13,9 +13,3 @@ command::
    $ ./tmux_patch_source.sh PATH_TO_TMUX_SOURCE
 
 After that follow the build instructions displayed by the script.
-
-
-TODO
-----
-
- * support Linux
