@@ -3,7 +3,7 @@ ifeq ($(UNAME), Linux)
 PASTEBOARD_SOURCE := pasteboard_x.c
 else
 PASTEBOARD_SOURCE := pasteboard.c
-LDFLAGS := "-framework Carbon"
+LDFLAGS := -framework Carbon
 endif
 
 all: libuglypasteboard.a uglypasteboard
