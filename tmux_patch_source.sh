@@ -12,7 +12,7 @@ fi
 
 patch $1/window-copy.c < tmux_uglypasteboard.patch
 
-if test `uname` -eq 'Darwin' ; then
+if test "$(uname)" = 'Darwin' ; then
     EXTRA_LDFLAGS='-framework Carbon'
 fi
 
