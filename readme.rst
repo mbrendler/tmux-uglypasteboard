@@ -16,7 +16,7 @@ Build the ugly pasteboard lib::
 
    $ make
 
-You need to download and extract the Tmux sources (Version 1.8) and run the
+You need to download and extract the Tmux sources (Version 1.9a) and run the
 following command::
 
    $ ./tmux_patch_source.sh PATH_TO_TMUX_SOURCE
