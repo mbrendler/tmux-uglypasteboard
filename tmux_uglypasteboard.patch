@@ -1,15 +1,8 @@
---- window-copy.c	2014-02-22 21:48:37.000000000 +0100
-+++ window-copy.c	2014-09-01 16:17:05.000000000 +0200
-@@ -1455,8 +1455,11 @@
- 	if (idx == -1) {
- 		limit = options_get_number(&global_options, "buffer-limit");
- 		paste_add(&global_buffers, buf, len, limit);
--	} else if (paste_replace(&global_buffers, idx, buf, len) != 0)
-+setPasteboard(NULL, buf, len);
-+	} else if (paste_replace(&global_buffers, idx, buf, len) != 0) {
-+setPasteboard(NULL, buf, len);
- 		free(buf);
-+        }
- }
- 
- void
+1496c1496
+< 	if (paste_set(buf, len, bufname, NULL) != 0)
+---
+> 	if (paste_set(buf, len, bufname, NULL) != 0) {
+1497a1498,1500
+>         } else {
+> setPasteboard(NULL, buf, len);
+>         }
