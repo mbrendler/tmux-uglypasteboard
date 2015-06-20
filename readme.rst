@@ -1,8 +1,8 @@
 Ugly Pasteboard
 ===============
 
-This is a naive implementation to access the OS X pasteboard.  I use this to
-patch Tmux, so it does automatically copy to OS X pasteboard.
+Copy to system pasteboard from tmux.  Works with OS X and the Linux X Server.
+Ugly Pasteboard patches the tmux source code.
 
 
 Installation
@@ -16,7 +16,7 @@ Build the ugly pasteboard lib::
 
    $ make
 
-You need to download and extract the Tmux sources (Version 1.9a) and run the
+You need to download and extract the Tmux sources (Version 2.0) and run the
 following command::
 
    $ ./tmux_patch_source.sh PATH_TO_TMUX_SOURCE
